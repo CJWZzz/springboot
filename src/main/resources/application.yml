@@ -1,0 +1,9 @@
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/ #路径
+      suffix: .jsp #文件名后缀
+server:
+  port: 8888 #访问的端口号
+  servlet:
+    context-path: /test #上下文路径

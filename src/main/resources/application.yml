@@ -1,9 +1,21 @@
 spring:
   mvc:
     view:
-      prefix: /WEB-INF/jsp/ #路径
-      suffix: .jsp #文件名后缀
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/test?characterEncoding=UTF-8
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
 server:
-  port: 8888 #访问的端口号
-  servlet:
-    context-path: /test #上下文路径
+  port: 8080
+mybatis:
+  mapper-locations: classpath:com/example/springboot/mapper/*.xml
+  type-aliases-package: com.example.springboot.pojo
+
+
+
